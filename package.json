@@ -4,19 +4,24 @@
 	"main": "index.ts",
 	"license": "MIT",
 	"scripts": {
-		"start": "ts-node index.ts"
+		"start": "ts-node index.ts",
+		"start-parallel": "ts-node index.ts --parallel",
+		"debug": "ts-node index.ts --verbose",
+		"debug-parallel": "ts-node index.ts --verbose --parallel"
 	},
 	"dependencies": {
 		"@elastic/elasticsearch": "7",
-		"axios": "^0.27.2",
 		"chalk": "4",
+		"dotenv": "^16.0.2",
+		"js-yaml": "^4.1.0",
 		"ts-node": "^10.9.1",
-		"typescript": "^4.8.4"
+		"typescript": "^4.8.4",
+		"zod": "^3.19.1"
 	},
 	"devDependencies": {
-		"@types/axios": "^0.14.0",
 		"@types/chalk": "^2.2.0",
-		"@types/node": "^18.7.23",
-		"@types/request": "^2.48.8"
+		"@types/dotenv": "^8.2.0",
+		"@types/js-yaml": "^4.0.5",
+		"@types/node": "^18.7.23"
 	}
 }
