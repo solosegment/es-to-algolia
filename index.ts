@@ -98,16 +98,18 @@ const run = async () => {
 				)
 			)
 			l(
-				chalk.bgGreen(
+				chalk.bgGreenBright(
 					`${
 						result.successfulEntries - result.tooLargeEntries
 					} successful entries`
 				)
 			)
 			l(
-				chalk.bgRed(
-					`${result.tooLargeEntries} rejected ("too large") entries`
-				)
+				result.tooLargeEntries
+					? `0 rejected`
+					: chalk.bgRed(
+							`${result.tooLargeEntries} rejected ("too large") entries`
+					  )
 			)
 			l("")
 		})
